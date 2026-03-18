@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Notalia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">&larr; Back</a>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: March 16, 2026</p>
+
+    <p>Notalia ("we", "our", "us") is a study companion app that turns your notes into quizzes. This Privacy Policy explains what data we collect, how we use it, and your rights.</p>
+
+    <h2>1. Data We Collect</h2>
+
+    <p><strong>Account Information</strong></p>
+    <ul>
+      <li>Email address and display name (when you create an account)</li>
+      <li>Authentication credentials managed by AWS Cognito (we never store your password directly)</li>
+    </ul>
+
+    <p><strong>Connected Services</strong></p>
+    <ul>
+      <li>When you connect GitHub, Google Docs, OneNote, or Notion, we store encrypted OAuth tokens to access your content on your behalf. We only access content you explicitly select.</li>
+    </ul>
+
+    <p><strong>User Content</strong></p>
+    <ul>
+      <li>Notes and files you connect or upload are used to generate quizzes</li>
+      <li>Quiz questions, answers, session progress, and study statistics</li>
+      <li>Uploaded files (PDFs, images, text documents) stored in encrypted cloud storage</li>
+    </ul>
+
+    <p><strong>Device Information</strong></p>
+    <ul>
+      <li>A random device identifier (Cognito Identity ID) for associating your data with your device</li>
+      <li>No advertising identifiers, location data, or device fingerprinting is collected</li>
+    </ul>
+
+    <p><strong>We do NOT collect:</strong></p>
+    <ul>
+      <li>Location data</li>
+      <li>Contacts or phone number</li>
+      <li>Advertising or tracking identifiers</li>
+      <li>Browsing history</li>
+      <li>Data from other apps on your device</li>
+    </ul>
+
+    <h2>2. How We Use Your Data</h2>
+    <ul>
+      <li><strong>Quiz Generation</strong>: Your note content is sent to Anthropic's Claude AI to generate quiz questions. Anthropic does not retain your content after processing — it is used solely to generate the quiz response and is not used to train AI models.</li>
+      <li><strong>Document Conversion</strong>: Uploaded PDFs and images are processed by AWS Bedrock (Qwen vision model) to extract text for quiz generation. This processing occurs within AWS infrastructure and content is not retained after conversion.</li>
+      <li><strong>Cross-Device Sync</strong>: If you create an account, your quizzes and progress sync across your devices.</li>
+      <li><strong>Study Statistics</strong>: We calculate streaks, scores, and activity to help you track your study habits.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p>We use the following third-party services to operate Notalia:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Data Shared</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AWS (Cognito, DynamoDB, S3, Lambda)</td>
+          <td>Account data, encrypted content</td>
+          <td>Authentication, storage, compute</td>
+        </tr>
+        <tr>
+          <td>Anthropic (Claude API)</td>
+          <td>Note content (not retained)</td>
+          <td>Quiz question generation</td>
+        </tr>
+        <tr>
+          <td>AWS Bedrock</td>
+          <td>Uploaded PDFs/images (not retained)</td>
+          <td>Document text extraction</td>
+        </tr>
+        <tr>
+          <td>GitHub API</td>
+          <td>Accessed via your OAuth token</td>
+          <td>Fetch your repositories and notes</td>
+        </tr>
+        <tr>
+          <td>Google Drive API</td>
+          <td>Accessed via your OAuth token</td>
+          <td>Fetch your Google Docs</td>
+        </tr>
+        <tr>
+          <td>Microsoft Graph API</td>
+          <td>Accessed via your OAuth token</td>
+          <td>Fetch your OneNote notebooks</td>
+        </tr>
+        <tr>
+          <td>Notion API</td>
+          <td>Accessed via your OAuth token</td>
+          <td>Fetch your Notion pages</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do not sell your data to any third party. We do not use your data for advertising.</p>
+
+    <h2>4. Data Security</h2>
+    <ul>
+      <li>All data is encrypted in transit (TLS) and at rest (AES-256 for storage, KMS for OAuth tokens)</li>
+      <li>OAuth tokens from connected services are encrypted with AWS KMS before storage</li>
+      <li>API access is authenticated via AWS IAM with signed requests</li>
+      <li>JWT tokens are cryptographically verified using Cognito's public keys</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li><strong>Account data</strong>: Retained until you delete your account</li>
+      <li><strong>Quizzes and sessions</strong>: Retained until you delete your account</li>
+      <li><strong>Processing jobs</strong>: Automatically deleted after 30 days</li>
+      <li><strong>Connected service tokens</strong>: Retained until you disconnect the service or delete your account</li>
+      <li><strong>Uploaded files</strong>: Retained until you delete them or delete your account</li>
+    </ul>
+
+    <h2>6. Your Rights</h2>
+    <p><strong>Account Deletion</strong>: You can permanently delete your account and all associated data from the Profile &gt; Danger Zone section in the app. This deletes your user record, all quizzes, sessions, study history, uploaded files, connected service tokens, and cloud storage content. This action cannot be undone.</p>
+    <p><strong>Disconnect Services</strong>: You can disconnect any connected service (GitHub, Google Docs, OneNote, Notion) at any time from the Profile screen. This revokes our access and deletes the stored token.</p>
+    <p><strong>Data Portability</strong>: You can export all your data as JSON from the Profile screen in the app.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Notalia requires users to be at least 13 years old. We do not knowingly collect data from children under 13. If you believe a child under 13 has created an account, please contact us and we will delete it.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last updated" date. Continued use of the app after changes constitutes acceptance.</p>
+
+    <h2>9. Contact</h2>
+    <p>For privacy questions, data requests, or concerns:</p>
+    <p><strong>Email</strong>: <a href="mailto:ndomondo2011@gmail.com" style="color:#818cf8;text-decoration:none;">ndomondo2011@gmail.com</a></p>
+
+    <p><em>This policy applies to the Notalia mobile application available on the Apple App Store and Google Play Store.</em></p>
+  </div>
+</body>
+</html>
