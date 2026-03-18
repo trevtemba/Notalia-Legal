@@ -125,7 +125,9 @@ td {
 }
 
 a.back {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   color: #818cf8;
   text-decoration: none;
   font-size: 14px;
@@ -134,6 +136,11 @@ a.back {
 
 a.back:hover {
   text-decoration: underline;
+}
+
+.back-icon {
+  width: 18px;
+  height: 18px;
 }
 
 em {
